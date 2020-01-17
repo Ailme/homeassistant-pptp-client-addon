@@ -1,0 +1,24 @@
+{
+  "name": "PPTP Client",
+  "version": "0.0.1",
+  "slug": "pptp_client",
+  "description": "PPTP Client",
+  "url": "https://github.com/Ailme/homeassistant-pptp-client-addon",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "host_network": true,
+  "privileged": ["NET_ADMIN"],
+  "options": {
+    "server": "",
+    "username": "",
+    "password": ""
+  },
+  "schema": {
+    "server": "str",
+    "username": "str",
+    "password": "str"
+  },
+  "devices": ["/dev/ppp:/dev/ppp:rwm"],
+  "full_access": true
+}
